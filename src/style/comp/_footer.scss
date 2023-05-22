@@ -1,0 +1,60 @@
+footer {
+  background-color: $VeryDarkViolet;
+  color: $GrayBack;
+  ul {
+    list-style: none;
+    text-transform: capitalize;
+    li {
+      a {
+        text-decoration: none;
+        color: $Gray;
+        font-weight: 500;
+      }
+      a:hover {
+        color: $VeryDarkViolet;
+      }
+      button {
+        width: 7em;
+        height: 3em;
+      }
+    }
+  }
+  .attribution {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  footer {
+    display: block;
+    text-align: center;
+    ul {
+      margin-top: 25px;
+    }
+    .cont {
+      padding: 25px 0;
+      margin-bottom: 15px;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    display: block;
+    padding: 1em 5em;
+    .cont {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .col {
+        text-align: left;
+        ul {
+          text-align: left;
+          margin-top: 0.5em;
+          li {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}

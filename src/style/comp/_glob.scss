@@ -1,0 +1,33 @@
+@import url(https://fonts.google.com/specimen/Poppins);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font-weight: 500, 700;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: $Cyan;
+  color: #fff;
+  font-weight: bold;
+  &:hover {
+    background-color: $CyanHover;
+    cursor: pointer;
+  }
+}
+
+h1 {
+  color: $DarkViolet;
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+section {
+  width: 100%;
+}

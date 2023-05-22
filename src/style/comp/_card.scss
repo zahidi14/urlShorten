@@ -1,0 +1,77 @@
+#card {
+  background-color: $GrayBack;
+  color: $VeryDarkViolet;
+  .content {
+    display: block;
+    padding: 1em 0;
+    .header {
+      display: block;
+      text-align: center;
+      padding: 50px 0;
+      p {
+        margin-top: 10px;
+      }
+    }
+    .card-cont {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      padding: 1em 80px;
+      .a {
+        margin-top: 0;
+      }
+      .b {
+        margin-top: 30px;
+      }
+      .c {
+        margin-top: 60px;
+      }
+      .card {
+        width: 30%;
+        height: 280px;
+        background-color: #fff;
+
+        border-radius: 5px;
+        padding: 20px;
+        .circle {
+          border-radius: 50%;
+          width: 90px;
+          height: 90px;
+          background-color: $VeryDarkBlue;
+          display: block;
+          text-align: center;
+          margin-top: -65px;
+          h1 {
+            color: $Cyan;
+          }
+        }
+        h2 {
+          color: $VeryDarkBlue;
+          font-weight: bolder;
+          margin: 1em 0;
+        }
+        p {
+          color: $VeryDarkViolet;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    display: block;
+    .card-cont {
+      display: block;
+    }
+  }
+}
+
+#bottom {
+  background-color: $DarkViolet;
+  padding: 4em;
+  text-align: center;
+  color: $GrayBack;
+  button {
+    margin-top: 20px;
+    width: 120px;
+  }
+}

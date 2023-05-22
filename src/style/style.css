@@ -1,0 +1,338 @@
+@import url(https://fonts.google.com/specimen/Poppins);
+header {
+  display: block;
+  padding-bottom: 7em;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  font-weight: 600;
+}
+header nav .logo {
+  margin: 0 20px -8px 0;
+}
+header nav .resp-icon:hover {
+  cursor: pointer;
+}
+header nav ul {
+  list-style: none;
+  text-transform: capitalize;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 75%);
+  font-weight: 500;
+}
+header nav ul li a:hover {
+  color: hsl(260, 8%, 14%);
+}
+header nav ul li button {
+  width: 7em;
+  height: 3em;
+}
+header .head {
+  display: flex;
+  width: 100%;
+  color: hsl(257, 7%, 63%);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 767px) {
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  header nav .navContainer {
+    font-weight: 900;
+    display: none;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    width: calc(100% - 30px);
+    padding: 30px;
+    background-color: hsl(260, 8%, 14%);
+    z-index: 99999;
+    border-radius: 10px;
+  }
+  header nav .navContainer.show {
+    display: block;
+  }
+  header nav .navContainer ul {
+    text-align: center;
+  }
+  header nav .navContainer ul li {
+    margin-top: 10px;
+  }
+  header nav .navContainer button {
+    width: 100%;
+  }
+  header nav .navContainer hr {
+    border: none;
+    border-top: 0.5px solid hsl(257, 7%, 63%); /* Adjust the color and thickness of the line as desired */
+    margin: 20px 0; /* Adjust the margin around the line as needed */
+  }
+}
+@media only screen and (min-width: 768px) {
+  header nav {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    padding: 2em 80px;
+  }
+  header nav .logo,
+  header nav ul li {
+    align-self: center;
+  }
+  header nav .resp-icon {
+    display: none;
+  }
+  header nav .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  header nav ul li {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  header nav hr {
+    display: none;
+  }
+  header .head {
+    justify-content: space-between;
+    padding: 0 80px;
+  }
+  header .head .head-desc {
+    order: 1;
+    min-width: 40%;
+  }
+  header .head .head-desc button {
+    margin-top: 1em;
+  }
+  header .head .head-img {
+    order: 2;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font-weight: 500, 700;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: hsl(180, 66%, 49%);
+  color: #fff;
+  font-weight: bold;
+}
+button:hover {
+  background-color: hsl(180, 66%, 80%);
+  cursor: pointer;
+}
+
+h1 {
+  color: hsl(257, 27%, 26%);
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+
+section {
+  width: 100%;
+}
+
+#main form {
+  width: 80%;
+  height: 100px;
+  padding: 1.5em;
+  margin: 0 auto 0 auto;
+  position: relative;
+  top: -50px;
+  background-color: hsl(257, 27%, 26%);
+  text-align: center;
+}
+#main form input[type=text],
+#main form button {
+  align-self: center;
+}
+#main form input[type=text] {
+  width: 65%;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+#main form button {
+  width: 20%;
+  border-radius: 5px;
+}
+#main ul {
+  list-style: none;
+}
+#main ul li {
+  margin: 10px auto 0 auto;
+  width: 80%;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  border-radius: 5px;
+}
+#main ul li .right {
+  color: hsl(180, 66%, 49%);
+}
+#main ul .copy {
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#card {
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(260, 8%, 14%);
+}
+#card .content {
+  display: block;
+  padding: 1em 0;
+}
+#card .content .header {
+  display: block;
+  text-align: center;
+  padding: 50px 0;
+}
+#card .content .header p {
+  margin-top: 10px;
+}
+#card .content .card-cont {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 1em 80px;
+}
+#card .content .card-cont .a {
+  margin-top: 0;
+}
+#card .content .card-cont .b {
+  margin-top: 30px;
+}
+#card .content .card-cont .c {
+  margin-top: 60px;
+}
+#card .content .card-cont .card {
+  width: 30%;
+  height: 280px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+#card .content .card-cont .card .circle {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: hsl(255, 11%, 22%);
+  display: block;
+  text-align: center;
+  margin-top: -65px;
+}
+#card .content .card-cont .card .circle h1 {
+  color: hsl(180, 66%, 49%);
+}
+#card .content .card-cont .card h2 {
+  color: hsl(255, 11%, 22%);
+  font-weight: bolder;
+  margin: 1em 0;
+}
+#card .content .card-cont .card p {
+  color: hsl(260, 8%, 14%);
+}
+@media only screen and (max-width: 767px) {
+  #card {
+    display: block;
+  }
+  #card .card-cont {
+    display: block;
+  }
+}
+
+#bottom {
+  background-color: hsl(257, 27%, 26%);
+  padding: 4em;
+  text-align: center;
+  color: hsl(0, 0%, 90%);
+}
+#bottom button {
+  margin-top: 20px;
+  width: 120px;
+}
+
+footer {
+  background-color: hsl(260, 8%, 14%);
+  color: hsl(0, 0%, 90%);
+}
+footer ul {
+  list-style: none;
+  text-transform: capitalize;
+}
+footer ul li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 75%);
+  font-weight: 500;
+}
+footer ul li a:hover {
+  color: hsl(260, 8%, 14%);
+}
+footer ul li button {
+  width: 7em;
+  height: 3em;
+}
+footer .attribution {
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  footer {
+    display: block;
+    text-align: center;
+  }
+  footer ul {
+    margin-top: 25px;
+  }
+  footer .cont {
+    padding: 25px 0;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    display: block;
+    padding: 1em 5em;
+  }
+  footer .cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .cont .col {
+    text-align: left;
+  }
+  footer .cont .col ul {
+    text-align: left;
+    margin-top: 0.5em;
+  }
+  footer .cont .col ul li {
+    margin-top: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */
