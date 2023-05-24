@@ -1,40 +1,27 @@
 #main {
   form {
     width: 80%;
-    height: 100px;
-    padding: 1.5em;
+
     margin: 0 auto 0 auto;
     position: relative;
-    top: -50px;
+
     background-color: $DarkViolet;
     text-align: center;
 
-    input[type="text"],
-    button {
-      align-self: center;
-    }
     input[type="text"] {
-      width: 65%;
       height: 50px;
       border-radius: 5px;
-      margin-right: 10px;
-    }
-    button {
-      width: 20%;
-      border-radius: 5px;
+
+      padding: 0 10px;
     }
   }
   ul {
     list-style: none;
     li {
-      margin: 10px auto 0 auto;
       width: 80%;
-      height: 60px;
+      height: 120px;
       background-color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 30px;
+      margin: 10px auto 0 auto;
       border-radius: 5px;
       .right {
         color: $Cyan;
@@ -42,9 +29,93 @@
     }
     .copy {
       height: 40px;
-      width: 100px;
+
       border-radius: 5px;
-      margin-left: 10px;
+    }
+  }
+
+  .error {
+    input[type="text"] {
+      border: 2px solid red;
+    }
+    :nth-child(1)::after {
+      position: absolute;
+      top: 50%;
+      left: 40px;
+      transform: translateY(-50%);
+      content: "Please add a link!!!";
+      color: red;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    button {
+      width: 20%;
+      border-radius: 5px;
+    }
+    form {
+      height: 100px;
+      padding: 1.2em;
+      top: -50px;
+    }
+    input[type="text"] {
+      width: 65%;
+      margin-right: 10px;
+    }
+    button {
+      align-self: center;
+    }
+    ul {
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        border-radius: 5px;
+        .right {
+          color: $Cyan;
+        }
+      }
+      .copy {
+        margin-left: 10px;
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    form {
+      height: 170px;
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+      flex-direction: column;
+      padding: 20px;
+      align-items: center;
+      align-content: center;
+      top: -85px;
+    }
+    button {
+      height: 50px;
+      width: calc(100% - 30px);
+      border-radius: 5px;
+    }
+    input[type="text"] {
+      width: calc(100% - 30px);
+      margin-right: 0;
+    }
+    ul {
+      margin: 20px auto;
+
+      li {
+        display: block;
+        text-align: left;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .right {
+        margin: 10px 0;
+      }
+      .copy {
+        width: 100%;
+      }
     }
   }
 }

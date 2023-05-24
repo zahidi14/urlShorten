@@ -6,27 +6,33 @@ import { get } from "./get";
 const Main = () => {
   const [input, setInput] = useState("");
   const [url, setUrl] = useState(null);
-
+  const [filled, setBlank] = useState(true);
   const handleInput = (event) => {
     setInput(event.target.value);
   };
 
   const short = (event) => {
     event.preventDefault();
-    get(input)
-      .then((res) => {
-        setUrl(res);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (input.length !== 0) {
+      get(input)
+        .then((res) => {
+          setUrl(res);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      setBlank(true);
+    } else {
+      console.log({ else: "gabisa goblog" });
+      setBlank(!filled);
+    }
 
     console.log({ res: url });
   };
 
   return (
     <div id="main">
-      <div className="form">
+      <div className={`${!filled ? "error" : " "}`}>
         <form action="" style={{ backgroundImage: `url(${back})` }}>
           <input type="text" value={input} onChange={handleInput} />
           <button onClick={short}>Shorten It!</button>

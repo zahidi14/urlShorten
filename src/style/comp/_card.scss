@@ -1,66 +1,145 @@
 #card {
   background-color: $GrayBack;
   color: $VeryDarkViolet;
-  .content {
-    display: block;
-    padding: 1em 0;
-    .header {
+  @media only screen and (min-width: 768px) {
+    .content {
       display: block;
-      text-align: center;
-      padding: 50px 0;
-      p {
-        margin-top: 10px;
-      }
-    }
-    .card-cont {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin: 0;
-      padding: 1em 80px;
-      .a {
-        margin-top: 0;
-      }
-      .b {
-        margin-top: 30px;
-      }
-      .c {
-        margin-top: 60px;
-      }
-      .card {
-        width: 30%;
-        height: 280px;
-        background-color: #fff;
-
-        border-radius: 5px;
-        padding: 20px;
-        .circle {
-          border-radius: 50%;
-          width: 90px;
-          height: 90px;
-          background-color: $VeryDarkBlue;
-          display: block;
-          text-align: center;
-          margin-top: -65px;
-          h1 {
-            color: $Cyan;
-          }
-        }
-        h2 {
-          color: $VeryDarkBlue;
-          font-weight: bolder;
-          margin: 1em 0;
-        }
+      padding: 1em 0;
+      .header {
+        display: block;
+        text-align: center;
+        padding: 50px 0;
         p {
-          color: $VeryDarkViolet;
+          margin-top: 10px;
+        }
+      }
+      .card-cont {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding: 1em 80px;
+        .a {
+          margin-top: 0;
+        }
+        .b {
+          margin-top: 30px;
+        }
+        .c {
+          margin-top: 60px;
+        }
+        .card {
+          width: 30%;
+          height: 280px;
+          background-color: #fff;
+
+          border-radius: 5px;
+          padding: 20px;
+          .circle {
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            background-color: $VeryDarkBlue;
+            display: block;
+            text-align: center;
+            margin-top: -65px;
+            h1 {
+              color: $Cyan;
+            }
+          }
+          h2 {
+            color: $VeryDarkBlue;
+            font-weight: bolder;
+            margin: 1em 0;
+          }
+          p {
+            color: $VeryDarkViolet;
+          }
         }
       }
     }
   }
   @media only screen and (max-width: 767px) {
-    display: block;
-    .card-cont {
+    .content {
       display: block;
+      padding: 1em 0;
+      .header {
+        display: block;
+        text-align: center;
+        padding: 50px 0;
+        p {
+          margin-top: 10px;
+        }
+      }
+      .flexContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      .card-cont {
+        width: calc(100% - 60px);
+        margin: 30px auto;
+        height: 200px;
+        background-color: #f2f2f2;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 0 30px;
+        position: relative;
+
+        &::before {
+          background-position: center;
+          background-repeat: no-repeat;
+          content: "";
+
+          color: cyan;
+          width: 80px;
+          height: 80px;
+          background-color: $VeryDarkBlue;
+          position: absolute;
+          top: -40px;
+          left: 40%;
+          z-index: 99999;
+          border-radius: 50%;
+        }
+
+        // &:last-child {
+        //   margin-right: 0;
+        // }
+        .textContainer {
+          display: block;
+          text-align: center;
+          margin-top: 60px;
+          h2 {
+            color: $VeryDarkBlue;
+            font-weight: bolder;
+            margin: 1em 0;
+          }
+          p {
+            color: $VeryDarkViolet;
+          }
+        }
+      }
+      .card-cont {
+        &.card1::before {
+          background-image: url("#{$brand}");
+          /* Additional styles specific to card1's pseudo-element */
+        }
+
+        &.card2::before {
+          background-image: url("#{$detail}");
+          /* Additional styles specific to card2's pseudo-element */
+        }
+
+        &.card3::before {
+          background-image: url("#{$customize}");
+          /* Additional styles specific to card3's pseudo-element */
+        }
+      }
+
+      h1 {
+        color: $Cyan;
+      }
     }
   }
 }
