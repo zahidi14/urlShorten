@@ -12,13 +12,13 @@ const Footer = () => {
         <h2>Boost your links today</h2>
         <button>Get Started</button>
       </section>
-      <footer>
+      <footer role="contentinfo">
         <div className="cont">
           <div className="logo">
             <Log style={sv} />
           </div>
           <div className="col">
-            <h4>Features</h4>
+            <h3>Features</h3>
             <ul>
               <li>Link Shortening</li>
               <li>Branded Links</li>
@@ -26,7 +26,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col">
-            <h4>Resources</h4>
+            <h3>Resources</h3>
             <ul>
               <li>Blog</li>
               <li>Developers</li>
@@ -34,7 +34,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col">
-            <h4>Company</h4>
+            <h3>Company</h3>
             <ul>
               <li>About</li>
               <li>Our Team</li>

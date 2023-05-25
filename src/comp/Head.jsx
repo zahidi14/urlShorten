@@ -11,8 +11,8 @@ const Head = () => {
   };
 
   return (
-    <header>
-      <nav>
+    <header role="banner">
+      <nav role="navigation">
         <div className="logo">
           <img src={Logo} alt="" />
         </div>

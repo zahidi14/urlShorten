@@ -2,7 +2,7 @@ import Main from "./Main";
 
 const Card = (res) => {
   return (
-    <section id="card">
+    <section id="card" role="main">
       <Main />
       <div className="content">
         <div className="header">
