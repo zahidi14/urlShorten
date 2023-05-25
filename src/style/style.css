@@ -277,48 +277,66 @@ section {
   #card .content .header p {
     margin-top: 10px;
   }
-  #card .content .card-cont {
+  #card .content .flexContainer {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-    padding: 1em 80px;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
   }
-  #card .content .card-cont .a {
-    margin-top: 0;
+  #card .content .card-cont {
+    width: calc(33.3333333333% - 60px);
+    margin: 30px auto;
+    height: 200px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0 30px;
+    position: relative;
   }
-  #card .content .card-cont .b {
-    margin-top: 30px;
-  }
-  #card .content .card-cont .c {
-    margin-top: 60px;
-  }
-  #card .content .card-cont .card {
-    width: 30%;
-    height: 280px;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-  }
-  #card .content .card-cont .card .circle {
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
+  #card .content .card-cont::before {
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+    color: cyan;
+    width: 80px;
+    height: 80px;
     background-color: hsl(255, 11%, 22%);
+    position: absolute;
+    top: -40px;
+    left: 15%;
+    z-index: 99999;
+    border-radius: 50%;
+  }
+  #card .content .card-cont .textContainer {
     display: block;
     text-align: center;
-    margin-top: -65px;
+    margin-top: 60px;
   }
-  #card .content .card-cont .card .circle h1 {
-    color: hsl(180, 66%, 49%);
-  }
-  #card .content .card-cont .card h2 {
+  #card .content .card-cont .textContainer h2 {
     color: hsl(255, 11%, 22%);
     font-weight: bolder;
     margin: 1em 0;
   }
-  #card .content .card-cont .card p {
+  #card .content .card-cont .textContainer p {
     color: hsl(260, 8%, 14%);
+  }
+  #card .content .card-cont:nth-child(2) {
+    margin-top: 60px;
+  }
+  #card .content .card-cont:nth-child(3) {
+    margin-top: 90px;
+  }
+  #card .content .card-cont.card1::before {
+    background-image: url("../images/icon-brand-recognition.svg");
+    /* Additional styles specific to card1's pseudo-element */
+  }
+  #card .content .card-cont.card2::before {
+    background-image: url("../images/icon-detailed-records.svg");
+    /* Additional styles specific to card2's pseudo-element */
+  }
+  #card .content .card-cont.card3::before {
+    background-image: url("../images/icon-fully-customizable.svg");
+    /* Additional styles specific to card3's pseudo-element */
   }
 }
 @media only screen and (max-width: 767px) {

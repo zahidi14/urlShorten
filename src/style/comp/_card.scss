@@ -13,40 +13,46 @@
           margin-top: 10px;
         }
       }
-      .card-cont {
+      .flexContainer {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        margin: 0;
-        padding: 1em 80px;
-        .a {
-          margin-top: 0;
-        }
-        .b {
-          margin-top: 30px;
-        }
-        .c {
-          margin-top: 60px;
-        }
-        .card {
-          width: 30%;
-          height: 280px;
-          background-color: #fff;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+      }
 
-          border-radius: 5px;
-          padding: 20px;
-          .circle {
-            border-radius: 50%;
-            width: 90px;
-            height: 90px;
-            background-color: $VeryDarkBlue;
-            display: block;
-            text-align: center;
-            margin-top: -65px;
-            h1 {
-              color: $Cyan;
-            }
-          }
+      .card-cont {
+        width: calc(100% / 3 - 60px);
+        margin: 30px auto;
+        height: 200px;
+        background-color: #f2f2f2;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 0 30px;
+        position: relative;
+
+        &::before {
+          background-position: center;
+          background-repeat: no-repeat;
+          content: "";
+
+          color: cyan;
+          width: 80px;
+          height: 80px;
+          background-color: $VeryDarkBlue;
+          position: absolute;
+          top: -40px;
+          left: 15%;
+          z-index: 99999;
+          border-radius: 50%;
+        }
+
+        // &:last-child {
+        //   margin-right: 0;
+        // }
+        .textContainer {
+          display: block;
+          text-align: center;
+          margin-top: 60px;
           h2 {
             color: $VeryDarkBlue;
             font-weight: bolder;
@@ -55,6 +61,28 @@
           p {
             color: $VeryDarkViolet;
           }
+        }
+        &:nth-child(2) {
+          margin-top: 60px;
+        }
+        &:nth-child(3) {
+          margin-top: 90px;
+        }
+      }
+      .card-cont {
+        &.card1::before {
+          background-image: url("#{$brand}");
+          /* Additional styles specific to card1's pseudo-element */
+        }
+
+        &.card2::before {
+          background-image: url("#{$detail}");
+          /* Additional styles specific to card2's pseudo-element */
+        }
+
+        &.card3::before {
+          background-image: url("#{$customize}");
+          /* Additional styles specific to card3's pseudo-element */
         }
       }
     }

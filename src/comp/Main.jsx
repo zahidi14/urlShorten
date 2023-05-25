@@ -44,7 +44,7 @@ const Main = () => {
             <li>
               <div className="link">{input}</div>{" "}
               <div className="right">
-                {url.data.result.full_short_link}{" "}
+                <span>{url.data.result.full_short_link} </span>
                 <button className="copy">Copy</button>
               </div>{" "}
             </li>
