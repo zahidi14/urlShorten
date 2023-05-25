@@ -34,7 +34,7 @@ const Main = () => {
     <div id="main">
       <div className={`${!filled ? "error" : " "}`}>
         <form action="" style={{ backgroundImage: `url(${back})` }}>
-          <label for="input" className="label" />
+          <label for="label" className="label" />
           <input type="text" id="label" value={input} onChange={handleInput} />
           <button onClick={short}>Shorten It!</button>
         </form>
